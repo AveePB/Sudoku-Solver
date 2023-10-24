@@ -1,12 +1,27 @@
 package app.gui;
 
+//Application Custom Packages
 import app.gui.actionlisteners.ClearButtonActionListener;
 import app.gui.actionlisteners.SolveButtonActionListener;
 import app.gui.doc.SudokuCellDoc;
 
-import javax.swing.*;
+//API Providing GUI
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+import javax.swing.JTextField;
+import javax.swing.WindowConstants;
 import javax.swing.border.CompoundBorder;
-import java.awt.*;
+
+//Abstract Window Toolkit
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.Font;
+import java.awt.GridLayout;
 
 
 public class MainWindow {
@@ -114,14 +129,14 @@ public class MainWindow {
         this.clearButton = new JButton("  Clear  ");
         this.clearButton.setFont(new Font("", Font.PLAIN, MainWindow.BUTTON_FONT_SIZE));
         this.clearButton.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2, true));
-        this.clearButton.addActionListener(new ClearButtonActionListener());
+        this.clearButton.addActionListener(new ClearButtonActionListener(this.cellTextFields));
         this.buttonPanel.add(this.clearButton);
 
         //Initializes the solve button.
         this.solveButton = new JButton("  Solve  ");
         this.solveButton.setFont(new Font("", Font.PLAIN, MainWindow.BUTTON_FONT_SIZE));
         this.solveButton.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2, true));
-        this.solveButton.addActionListener(new SolveButtonActionListener());
+        this.solveButton.addActionListener(new SolveButtonActionListener(this.cellTextFields));
         this.buttonPanel.add(this.solveButton);
 
         this.mainFrame.add(this.buttonPanel, BorderLayout.SOUTH);

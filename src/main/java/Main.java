@@ -1,4 +1,6 @@
+//Application Custom Packages
 import app.gui.MainWindow;
+
 
 public class Main {
     public static void main(String[] args) {
