@@ -1,10 +1,13 @@
 package app.gui.doc;
 
+//API Providing GUI
 import javax.swing.text.AttributeSet;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.PlainDocument;
 
+
 public class SudokuCellDoc extends PlainDocument {
+    //SudokuCellDoc const values:
     private static final int LIMIT = 1;
 
     @Override
