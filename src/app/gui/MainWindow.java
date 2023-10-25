@@ -26,7 +26,7 @@ import java.awt.GridLayout;
 
 public class MainWindow {
     //Window const values:
-    private static final String ICON_PATH = "./src/resources/img/main-window-icon.png";
+    private static final String ICON_PATH = "./resources/img/main-window-icon.png";
     private static final String WINDOW_TITLE = "Sudoku Solver";
     private static final int WINDOW_SIZE = 520;
     private static final int SUDOKU_CELL_FONT_SIZE = 32;
